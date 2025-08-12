@@ -1,0 +1,41 @@
+version: '3.8'
+services:
+  api-gateway:
+    build: ./api-gateway
+    ports:
+      - "4000:4000"
+    volumes:
+      - ./api-gateway:/app
+      - /app/node_modules
+    command: nodemon server.js
+    depends_on:
+      - user-service
+      - product-service
+      - order-service
+
+  user-service:
+    build: ./user-service
+    ports:
+      - "4001:4001"
+    volumes:
+      - ./user-service:/app
+      - /app/node_modules
+    command: nodemon server.js
+
+  product-service:
+    build: ./product-service
+    ports:
+      - "4002:4002"
+    volumes:
+      - ./product-service:/app
+      - /app/node_modules
+    command: nodemon server.js
+
+  order-service:
+    build: ./order-service
+    ports:
+      - "4003:4003"
+    volumes:
+      - ./order-service:/app
+      - /app/node_modules
+    command: nodemon server.js
