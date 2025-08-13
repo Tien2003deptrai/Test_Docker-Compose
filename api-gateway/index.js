@@ -15,3 +15,7 @@ console.log('giayx dua')
 console.log('ở vạch đích rồi biết phải làm sao')
 console.log('test nao`')
 console.log('test nao`')
+console.log("Hello World");
+
+
+console.log('lại là tiến đây')
