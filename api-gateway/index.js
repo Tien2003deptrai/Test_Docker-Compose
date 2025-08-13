@@ -7,3 +7,5 @@ console.log("Hello World");
 
 
 // ditconme m
+
+console.log('hehe quá tuyệt vời xong task nè')
